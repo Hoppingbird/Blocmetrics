@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+  <h1>Blocmetrics - this is the registered application index view</h1>
+  <p>Listing Registered Applications</p>
+
+
+
+  <div class="jumbotron">
+    <% @registered_applications.each do |registered_application| %>
+      <div class="media">
+        <div class="media-body">
+          <%= link_to registered_application.name, registered_application.url %></td>
+        <br />
+           <%= link_to 'Show', registered_application, class: 'btn btn-primary'%></td>
+           <%= link_to 'Edit', edit_registered_application_path(registered_application), class: 'btn btn-primary' %></td>
+           <%= link_to 'Destroy', registered_application, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %></td>
+        </div>
+
+      </div>
+
+    <% end %>
+  </div>
+
+<br>
+
+<%= link_to 'New Registered application', new_registered_application_path %>

@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+<h1>This is the reg app show view</h1>
+<div class="jumbotron">
+
+  <%= @registered_application.name %>
+  <br />
+  <%= link_to @registered_application.url %>
+  <br/>
+  <br/>
+  <%= link_to 'Edit', edit_registered_application_path(@registered_application), class: 'btn btn-primary' %> |
+  <%= link_to 'Back', registered_applications_path, class: 'btn btn-primary' %>
+
+</div>
+
+
+

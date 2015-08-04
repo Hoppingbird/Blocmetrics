@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+
   devise_for :users
+
   get 'welcome/index'
-:wq
 
   get 'welcome/about'
+
+  resources :registered_applications
 
   root to: 'welcome#index'
 
