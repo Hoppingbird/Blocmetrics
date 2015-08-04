@@ -1,2 +1,24 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<br>
+<div class="jumbotron">
+  <h1>Blocmetrics</h1>
+  <p>Blocmetrics is an API tracking and reporting tool!</p>
+  <p>
+    <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
+    <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
+  </p>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h2>Capture client side events</h2>
+    <p>Via a client-side JavaScript snippet that allows a user to track events on their website.</p>
+  </div>
+  <div class="col-md-4">
+    <h2>See events for registered applications</h2>
+    <p>Via a server-side API that captures and saves those events to a database.</p>
+  </div>
+  <div class="col-md-4">
+    <h2>Fancy Graphs!</h2>
+    <p>Via a Rails application that displays the captured event data for a user.</p>
+  </div>
+</div>

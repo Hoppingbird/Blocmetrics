@@ -6,6 +6,7 @@ gem 'devise'
 gem 'faker'
 gem 'chartkick'
 gem 'groupdate'
+gem 'figaro', '1.0'
 
 
 
