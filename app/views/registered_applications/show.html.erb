@@ -1,10 +1,17 @@
 <p id="notice"><%= notice %></p>
 <h1>This is the reg app show view</h1>
+
+<!-- JavaScript -->
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+
 <div class="jumbotron">
 
-  <%= @registered_application.name %>
+  <h5>Name:</h5><%= @registered_application.name %>
   <br />
-  <%= link_to @registered_application.url %> <%= " -- Events - #{@event_count}" %>
+  <h5><%= link_to @registered_application.url %> </h5>
+  <hr>
+  <%= pie_chart @registered_application.events.group(:name).count %>
+  <%= line_chart @registered_application.events.group_by_day(:created_at).count %>
   <br/>
   <br/>
   <%= link_to 'Edit', edit_registered_application_path(@registered_application), class: 'btn btn-primary' %> |
