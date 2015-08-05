@@ -11,6 +11,8 @@ class RegisteredApplicationsController < ApplicationController
   # GET /registered_applications/1.json
   def show
     @registered_applications = RegisteredApplication.all
+    @events = @registered_application.events.group_by(&:name)
+    @event_count = @registered_application.events.count
   end
 
   # GET /registered_applications/new

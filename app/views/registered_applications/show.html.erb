@@ -4,7 +4,7 @@
 
   <%= @registered_application.name %>
   <br />
-  <%= link_to @registered_application.url %>
+  <%= link_to @registered_application.url %> <%= " -- Events - #{@event_count}" %>
   <br/>
   <br/>
   <%= link_to 'Edit', edit_registered_application_path(@registered_application), class: 'btn btn-primary' %> |

@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-  <h1>Blocmetrics - this is the registered application index view</h1>
-  <p>Listing Registered Applications</p>
+  <h1>Blocmetrics - this is the reg app index view</h1>
+  <p>Your Registered Applications</p>
 
 
 
@@ -14,13 +14,17 @@
            <%= link_to 'Show', registered_application, class: 'btn btn-primary'%></td>
            <%= link_to 'Edit', edit_registered_application_path(registered_application), class: 'btn btn-primary' %></td>
            <%= link_to 'Destroy', registered_application, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %></td>
+
         </div>
 
       </div>
 
     <% end %>
+    <br/>
+    <br/>
+    <%= link_to 'Register Another App', new_registered_application_path, class: 'btn btn-primary' %>
   </div>
 
 <br>
 
-<%= link_to 'New Registered application', new_registered_application_path %>
+
